@@ -10,16 +10,22 @@ const SendData = () => {
     message: "",
   });
 
-  //   let { name, email, message } = user;
+  let { name, email, message } = user;
 
   const postData = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
   const submitData = (e) => {
     e.preventDefault();
-    axios.post(baseUrl, user).then((res) => {
-      console.log(res);
-    });
+    axios
+      .post(baseUrl, {
+        name,
+        email,
+        message,
+      })
+      .then((res) => {
+        setUser(user);
+      });
   };
   return (
     <>
