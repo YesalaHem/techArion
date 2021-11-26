@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+.nav {
+  height: 5rem;
+  box-shadow: 0 0 5px 5px #ededed;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav .nav-item a {
+  color: #282c34;
+}
+.count,
+.form-data {
+  margin: 0 auto;
+}
+.card {
+  width: 100%;
+  margin: 1rem;
+}
